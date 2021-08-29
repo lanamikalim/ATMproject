@@ -3,12 +3,6 @@ import java.util.Map;
 
 public class ATM {
 
-	
-	/**
-	 * 
-	 * 
-	 * comments to be reverted.
-	 */
 	Map<String,Float> bankAccounts = new HashMap<String,Float>();
 
 	public void deposit(String bankID,  float depositVal) {
