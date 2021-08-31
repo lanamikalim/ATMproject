@@ -20,21 +20,22 @@ public class ATM {
 		return bankAccounts.get(id);
 	}
 	
-	public static String withdraw(String accountID, double amount) {
+	public static void withdraw(String accountID, double amount) {
 		float famount = (float)(amount);
 		if(bankAccounts.get(accountID) < famount) {
-			return "ya broke ;( sorry !";
+			System.out.println("Withdraw failed. ya broke ;( sorry !");
 		}else {
 			bankAccounts.put(accountID, bankAccounts.get(accountID) - famount);
-			return "Withdrew " + amount + " successfully. Current balance of " + accountID + " is " + bankAccounts.get(accountID);
+			System.out.println("Withdrew " + amount + " successfully. Current balance of " + accountID + " is " + bankAccounts.get(accountID));
 		}
 	}
 	
-	public static String checkBalance(String accountID) {
+	public static void checkBalance(String accountID) {
 		if(!bankAccounts.containsKey(accountID)) {
-			return "No account with that ID currently exists.";
+			System.out.println("Could not check balance. No account with that ID currently exists.");
+		}else {
+			System.out.println("Checking balance of " + accountID + ": " + bankAccounts.get(accountID));
 		}
-		return "" + bankAccounts.get(accountID);
 	}
 	
 	
