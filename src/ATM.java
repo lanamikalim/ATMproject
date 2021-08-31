@@ -20,5 +20,12 @@ public class ATM {
 		return bankAccounts.get(id);
 	}
 	
+	public String withdraw(String accountID, int amount) {
+		if(bankAccounts.get(accountID) < amount) {
+			return "ya broke ;(";
+		}
+		return "";
+	}
+	
 	
 }
