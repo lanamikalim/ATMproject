@@ -3,9 +3,9 @@ import java.util.Map;
 
 public class ATM {
 
-	Map<String,Float> bankAccounts = new HashMap<String,Float>();
+	static Map<String,Float> bankAccounts = new HashMap<String,Float>();
 
-	public void deposit(String bankID,  double depositVal) {
+	public static void deposit(String bankID,  double depositVal) {
 		float newDeposit = (float)(depositVal);
 
 		if(bankAccounts.containsKey(bankID)) {
