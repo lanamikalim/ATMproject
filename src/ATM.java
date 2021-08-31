@@ -5,12 +5,12 @@ public class ATM {
 
 	Map<String,Float> bankAccounts = new HashMap<String,Float>();
 
-	public void deposit(String bankID,  float depositVal) {
-		float newDeposit = depositVal;
+	public void deposit(String bankID,  double depositVal) {
+		float newDeposit = (float)(depositVal);
 
 		if(bankAccounts.containsKey(bankID)) {
 			float currentVal = bankAccounts.get(bankID);
-			newDeposit = currentVal + depositVal;
+			newDeposit = currentVal + (float)depositVal;
 		}
 
 		bankAccounts.put(bankID, newDeposit);
