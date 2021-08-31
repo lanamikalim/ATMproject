@@ -30,5 +30,12 @@ public class ATM {
 		}
 	}
 	
+	public String checkBalance(String accountID) {
+		if(!bankAccounts.containsKey(accountID)) {
+			return "No account with that ID currently exists.";
+		}
+		return "" + bankAccounts.get(accountID);
+	}
+	
 	
 }
