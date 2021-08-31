@@ -20,7 +20,7 @@ public class ATM {
 		return bankAccounts.get(id);
 	}
 	
-	public String withdraw(String accountID, double amount) {
+	public static String withdraw(String accountID, double amount) {
 		float famount = (float)(amount);
 		if(bankAccounts.get(accountID) < famount) {
 			return "ya broke ;( sorry !";
@@ -30,7 +30,7 @@ public class ATM {
 		}
 	}
 	
-	public String checkBalance(String accountID) {
+	public static String checkBalance(String accountID) {
 		if(!bankAccounts.containsKey(accountID)) {
 			return "No account with that ID currently exists.";
 		}
